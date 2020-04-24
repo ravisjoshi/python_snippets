@@ -59,6 +59,14 @@ class linkedList():
             print(cur_node.data)
             cur_node = cur_node.next
 
+    def llist_length(self):
+        cur_node = self.head
+        count = 1
+        while cur_node.next:
+            count += 1
+            cur_node = cur_node.next
+        return count
+
 ll = linkedList()
 ll.append("Ravi")
 # ll.printList()
@@ -71,3 +79,4 @@ ll.printList()
 print('--------------')
 ll.delete_element('Shankar')
 ll.printList()
+print(ll.llist_length())
