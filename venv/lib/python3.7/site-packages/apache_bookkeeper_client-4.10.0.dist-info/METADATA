@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: apache-bookkeeper-client
+Version: 4.10.0
+Summary: Apache BookKeeper client library
+Home-page: https://github.com/apache/bookkeeper/tree/master/stream/clients/python
+Author: Apache BookKeeper
+Author-email: dev@bookkeeper.apache.org
+License: Apache 2.0
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Requires-Dist: protobuf (>=3.0.0)
+Requires-Dist: requests (<3.0.0dev,>=2.18.0)
+Requires-Dist: setuptools (>=34.0.0)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: pytz
+Requires-Dist: grpcio (>=1.8.2)
+Requires-Dist: pymmh3 (>=0.0.3)
+Requires-Dist: futures (>=3.2.0) ; python_version < "3.2"
+
+Python Client for Apache BookKeeper
+===================================
+
+Apache BookKeeper is a scalable, fault tolerant and low latency storage service optimized for append-only workloads.
+
+

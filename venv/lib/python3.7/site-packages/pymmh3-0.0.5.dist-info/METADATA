@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pymmh3
+Version: 0.0.5
+Summary: Pure python mmh3 implementation compatible with python2 and python3
+Home-page: https://github.com/aahmed-se/pymmh3
+Author: Ali Ahmed
+Author-email: alahmed.se@gmail.com
+License: CC0 1.0
+Keywords: mmh3,hashing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Common Public License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+UNKNOWN
+
+
