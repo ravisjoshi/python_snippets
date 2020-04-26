@@ -1,8 +1,9 @@
-from pulsar import Client, AuthenticationToken
+from pulsar import Client, AuthenticationToken, MessageId
 
 client = Client('pulsar+ssl://gateway.eis.ctl.io:6651/',
-                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlcmFsLXVzZXIiLCJleHAiOjE2MTk0NDcxNDB9.5U0ganBuyyEEYyW77KgUxutVXW0AqmQJdygchG1r13w'))
-consumer = client.subscribe('persistent://public/default/my-topic', 'my-sub')
+                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxOTQ1OTg0NH0.6BHk-f7Y53yJyah5ypKjAaxFtHcLH8vn51D07TQxSic'))
+
+consumer = client.subscribe('persistent://federal-tenant/federal-namespace/my-topic', 'my-sub')
 
 while True:
     try:
