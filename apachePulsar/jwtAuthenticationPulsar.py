@@ -1,7 +1,7 @@
 from pulsar import Client, AuthenticationToken
 
 client = Client('pulsar+ssl://gateway.eis.ctl.io:6651/',
-                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKb2UifQ.ipevRNuRP6HflG8cFKnmUPtypruRC4fb1DWtoLL62SY'))
+                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlcmFsLXVzZXIiLCJleHAiOjE2MTk0NDcxNDB9.5U0ganBuyyEEYyW77KgUxutVXW0AqmQJdygchG1r13w'))
 consumer = client.subscribe('persistent://public/default/my-topic', 'my-sub')
 
 while True:
