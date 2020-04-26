@@ -7,7 +7,7 @@ client = Client("pulsar+ssl://gateway.eis.ctl.io:6651/")
 
 # Create a producer on the topic. If the topic doesn't exist
 # it will be automatically created
-producer = client.create_producer('persistent://joshi-tenant/joshi-namespace/rjoshi-topic')
+producer = client.create_producer('persistent://public/default/my-topic')
 
 for i in range(10):
     content = 'hello-pulsar-%d' % i

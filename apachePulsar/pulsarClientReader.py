@@ -2,7 +2,7 @@ import pulsar
 from pulsar import schema
 from pulsar import MessageId
 
-TOPIC_NAME='persistent://joshi-tenant/joshi-namespace/rjoshi-topic'
+TOPIC_NAME='persistent://public/default/my-topic'
 
 client = pulsar.Client('pulsar+ssl://gateway.eis.ctl.io:6651')
 reader = client.create_reader(topic=TOPIC_NAME, start_message_id=MessageId.earliest)

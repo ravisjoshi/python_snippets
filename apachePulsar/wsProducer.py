@@ -1,6 +1,6 @@
-import websocket, base64, json, pickle
+import websocket, base64, json
 
-TOPIC = 'wss://gateway.eis.ctl.io:8443/pulsar/ws/v2/producer/persistent/joshi-tenant/joshi-namespace/rjoshi-topic'
+TOPIC = 'wss://gateway.eis.ctl.io:8443/pulsar/ws/v2/producer/persistent/public/default/my-topic'
 
 ws = websocket.create_connection(TOPIC)
 
