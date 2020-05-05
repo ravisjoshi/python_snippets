@@ -14,7 +14,8 @@ class Solution:
                 nums[index] = nums[i]
                 index += 1
         return index
-    """ singleNumber:
+    """
+    singleNumber: Given a non-empty array of integers, every element appears twice except for one. Find that single one.
     Input: [2,2,1]  /  Output: 1
     Input: [4,1,2,1,2]  /  Output: 4
     """
@@ -34,6 +35,7 @@ class Solution:
     8^2 + 2^2 = 68
     6^2 + 8^2 = 100
     1^2 + 0^2 + 0^2 = 1
+    HappyNumber: Those numbers for which this process ends in 1 are happy numbers.
     """
     def isHappy(self, n):
         if n == 1:
@@ -53,28 +55,7 @@ class Solution:
                 return False
             existing_value.add(_sum)
 
-    def is_happy(self, input_number, existing_values=set()):
-
-        if input_number == 1:
-            return True
-        elif input_number in existing_values:
-            return False
-        else:
-            existing_values.add(input_number)
-
-        _square_sum = 0
-        while input_number:
-
-            remainder = input_number % 10
-            input_number = input_number // 10
-            _square_sum += remainder**2
-            print("Remainder: {}, new input_number: {}".format(remainder, input_number))
-
-        return self.is_happy(_square_sum, existing_values)
-
 if __name__ == '__main__':
     s = Solution()
     h_num = 39
     print(s.isHappy(h_num))
-
-
