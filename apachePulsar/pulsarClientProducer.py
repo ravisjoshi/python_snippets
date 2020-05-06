@@ -3,7 +3,7 @@ from pulsar import Client
 
 # Create a Pulsar client instance. The instance can be shared across multiple
 # producers and consumers
-client = Client("pulsar+ssl://gateway.eis.ctl.io:6651/")
+client = Client("pulsar+ssl://gateway.ravi.joshi.tld:6651/")
 
 # Create a producer on the topic. If the topic doesn't exist
 # it will be automatically created

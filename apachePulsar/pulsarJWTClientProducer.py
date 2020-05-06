@@ -2,12 +2,12 @@ from pulsar import Client, AuthenticationToken
 
 # Create a Pulsar client instance. The instance can be shared across multiple
 # producers and consumers
-client = Client('pulsar+ssl://gateway.eis.ctl.io:6651/',
-                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxOTQ1OTg0NH0.6BHk-f7Y53yJyah5ypKjAaxFtHcLH8vn51D07TQxSic'))
+client = Client('pulsar+ssl://gateway.ravi.joshi.tld:6651/',
+                authentication=AuthenticationToken('exxxxxxxxxxxxxxxxxxxxxxc'))
 
 # Create a producer on the topic. If the topic doesn't exist
 # it will be automatically created
-producer = client.create_producer('persistent://federal-tenant/federal-namespace/my-topic')
+producer = client.create_producer('persistent://joshi-tenant/joshi-namespace/my-topic')
 
 for i in range(10):
     content = 'hello-pulsar-%d' % i

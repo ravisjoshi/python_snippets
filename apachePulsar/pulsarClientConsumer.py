@@ -1,6 +1,6 @@
 from pulsar import Client
 
-client = Client("pulsar+ssl://gateway.eis.ctl.io:6651/")
+client = Client("pulsar+ssl://gateway.ravi.joshi.tld:6651/")
 consumer = client.subscribe('persistent://public/default/my-topic', 'my-sub')
 
 while True:

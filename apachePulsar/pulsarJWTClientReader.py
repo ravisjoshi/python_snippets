@@ -1,9 +1,9 @@
 from pulsar import Client, AuthenticationToken, MessageId
 
-TOPIC_NAME='persistent://federal-tenant/federal-namespace/my-topic'
+TOPIC_NAME='persistent://joshi-tenant/joshi-namespace/my-topic'
 
-client = Client('pulsar+ssl://gateway.eis.ctl.io:6651/',
-                authentication=AuthenticationToken('eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYxOTQ1OTg0NH0.6BHk-f7Y53yJyah5ypKjAaxFtHcLH8vn51D07TQxSic'))
+client = Client('pulsar+ssl://gateway.ravi.joshi.tld:6651/',
+                authentication=AuthenticationToken('exxxxxxxxxxxxxxxxxxxxxxc'))
 
 reader = client.create_reader(topic=TOPIC_NAME, start_message_id=MessageId.earliest)
 

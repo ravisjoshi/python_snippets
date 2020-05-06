@@ -1,6 +1,6 @@
 import websocket, base64, json
 
-TOPIC = 'wss://gateway.eis.ctl.io:8443/pulsar/ws/v2/consumer/persistent/public/default/my-topic/my-sub'
+TOPIC = 'wss://gateway.ravi.joshi.tld:8443/pulsar/ws/v2/consumer/persistent/public/default/my-topic/my-sub'
 
 ws = websocket.create_connection(TOPIC)
 
