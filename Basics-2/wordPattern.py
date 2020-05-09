@@ -11,9 +11,33 @@ You may assume pattern contains only lowercase letters, and str contains lowerca
 
 class Solution:
     def wordPattern(self, pattern, _str):
+        arrayList = _str.split()
+        if len(pattern) != len(arrayList):
+            return False
+        elif len(set(pattern)) != len(set(arrayList)):
+            return False
+        _dict = {}
+        for index, value in zip(pattern, arrayList):
+            if index not in _dict.keys() and value not in _dict.values():
+                _dict.update({index: value})
+            elif not _dict[index] == value:
+                return False
+        return True
 
 if __name__ == '__main__':
     s = Solution()
     pattern = "abba"
     _str = "dog cat cat dog"
+    print(s.wordPattern(pattern, _str))
+
+    pattern = "abba"
+    _str = "dog cat cat fish"
+    print(s.wordPattern(pattern, _str))
+
+    pattern = "aaaa"
+    _str = "dog cat cat dog"
+    print(s.wordPattern(pattern, _str))
+
+    pattern = "abba"
+    _str = "dog dog dog dog"
     print(s.wordPattern(pattern, _str))
