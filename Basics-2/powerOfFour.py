@@ -4,11 +4,11 @@ Input: 16  /  Output: true
 Input: 5  /  Output: false
 Follow up: Could you solve it without loops/recursion?
 """
-from time import sleep
+from math import log
 
 class Solution:
     def isPowerOfFour(self, num):
-        
+        return log(num, 4).is_integer()
 
 if __name__ == '__main__':
     s = Solution()
