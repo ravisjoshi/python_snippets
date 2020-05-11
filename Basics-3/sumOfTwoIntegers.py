@@ -6,11 +6,10 @@ Input: a = -2, b = 3   /   Output: 1
 
 class Solution:
     def getSum(self, firstNum, secondNum):
-        output = 0
-
-        return output
+        return sum([firstNum+secondNum])
 
 if __name__ == '__main__':
     s = Solution()
     firstNum = 5
     secondNum = 3
+    print(s.getSum(firstNum, secondNum))
