@@ -9,15 +9,9 @@ Restrictions:
 class Solution:
     def reverseStr(self, _String, k):
         inputString = list(_String)
-        if k == 1:
-            return inputString
-        elif len(inputString) == k:
-            return inputString[::-1]
 
-        for index in range(0, len(inputString)-1, k*2):
-            inputString[index:index+k] = inputString[index+(k-1):index-1:-1]
-            first, second = inputString[index], inputString[index+1]
-            inputString[index], inputString[index + 1] = second, first
+        for index in range(0, len(inputString), 2 * k):
+            inputString[index:index + k] = inputString[index:index + k][::-1]
 
         return ''.join(inputString)
 
