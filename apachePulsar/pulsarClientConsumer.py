@@ -1,6 +1,14 @@
 from pulsar import Client
 
-client = Client("pulsar+ssl://gateway.ravi.joshi.tld:6651/")
+# Connect to pulsar via gateway server
+client_gateway = Client("pulsar+ssl://eisgatewaytest1.test.intranet:6651/")
+
+# Connect to pulsar via gateway server
+client_direct = Client("pulsar://eisgatewaytest2.test.intranet:6650/")
+
+# Set which type of client connection you want to use
+client = client_direct
+
 consumer = client.subscribe('persistent://public/default/my-topic', 'my-sub')
 
 while True:

@@ -1,12 +1,15 @@
 import json
 from pulsar import Client
 
-# Create a Pulsar client instance. The instance can be shared across multiple
-# producers and consumers
-client = Client("pulsar+ssl://gateway.ravi.joshi.tld:6651/")
+# Connect to pulsar via gateway server
+client_gateway = Client("pulsar+ssl://eisgatewaytest1.test.intranet:6651/")
 
-# Create a producer on the topic. If the topic doesn't exist
-# it will be automatically created
+# Connect to pulsar via gateway server
+client_direct = Client("pulsar://eisgatewaytest2.test.intranet:6650/")
+
+# Set which type of client connection you want to use
+client = client_direct
+
 producer = client.create_producer('persistent://public/default/my-topic')
 
 for i in range(10):

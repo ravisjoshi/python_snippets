@@ -1,8 +1,12 @@
 import websocket, base64, json
 
-TOPIC = 'wss://gateway.ravi.joshi.tld:8443/pulsar/ws/v2/consumer/persistent/public/default/my-topic/my-sub'
+# Connect to pulsar via gateway server
+TOPIC_gateway = 'wss://eisgatewaytest1.test.intranet:8443/pulsar/ws/v2/producer/persistent/public/default/my-topic/my-sub'
 
-ws = websocket.create_connection(TOPIC)
+# Connect to pulsar via gateway server
+TOPIC_direct = 'ws://eisgatewaytest2.test.intranet:8080/ws/v2/producer/persistent/public/default/my-topic/my-sub'
+
+ws = websocket.create_connection(TOPIC_direct)
 
 while True:
     msg = json.loads(ws.recv())
