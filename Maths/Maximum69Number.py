@@ -23,8 +23,25 @@ Constraints:
 
 class Solution:
     def maximum69Number(self, num):
+        _str = str(num)
+        arr = [s for s in _str]
+        index = arr.index('6') if '6' in arr else None
+        if index is not None:
+            arr[index] = '9'
+        return int("".join(arr))
+
+    def maximum69Number_method2(self, num):
+        return int(str(num).replace('6', '9', 1))
 
 
 if __name__ == '__main__':
     s = Solution()
-    
+    num = 6699
+    print(s.maximum69Number(num))
+
+    num = 9669
+    print(s.maximum69Number(num))
+
+    num = 9999
+    print(s.maximum69Number(num))
+
