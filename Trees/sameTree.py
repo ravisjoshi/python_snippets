@@ -46,8 +46,8 @@ class Solution:
 
 if __name__ == '__main__':
     obj = Solution()
-    # t1 = [1, 2, 3]
-    # t2 = [1, 2, 3]
+    # t1NodeValues = [1, 2, 3]
+    # t2NodeValues = [1, 2, 3]
     print(obj.isSameTree(t1, t2))
 
     # t1 = [1, 2]
