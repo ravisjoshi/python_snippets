@@ -36,4 +36,5 @@ dll.append("Joshi")
 dll.append("A")
 dll.append("B")
 dll.append("X")
-print(dll.printList())
+
+dll.printList()
