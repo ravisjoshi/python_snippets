@@ -10,6 +10,8 @@ for n in my_gen:
 end_time = time()
 print('Elapsed time: {}'.format(end_time - start_time))
 time_taken_by_generator = end_time - start_time
+
+
 ## List method
 start_time = time()
 num =100000000
