@@ -9,6 +9,14 @@ Example: Given binary tree [3,9,20,null,null,15,7],
     /  \
    15   7
 return its minimum depth = 2.
+
+Example: Given binary tree [1,2,3,4,null,null,5],
+      1
+     / \
+   2    3
+  /      \
+4         5
+return its minimum depth = 3.
 """
 
 class TreeNode:
@@ -17,28 +25,24 @@ class TreeNode:
         self.left = left
         self.right = right
 
-
 class Solution:
     def minDepth(self, root):
         if not root:
             return 0
-        elif root and not root.left and not root.right:
-            return 1
-        else:
-            count = 1
-            left_depth = self._min_depth(root.left, count)
-            right_depth = self._min_depth(root.right, count)
-
-        return min(left_depth, right_depth)
+        return self._min_depth(root, 1)
 
     def _min_depth(self, cur_node, count):
         if not cur_node:
-            return count
+            return
         else:
-            count += 1
-            if cur_node.left:
-                self._min_depth(cur_node.left, count)
-            elif cur_node.right:
-                self._min_depth(cur_node.right, count)
-            else:
-                return count
+            left = self._min_depth(cur_node.left, count + 1)
+            right = self._min_depth(cur_node.right, count + 1)
+
+        if not left and right: return right
+        if not right and left: return left
+        if left and right: return min(left, right)
+
+        return count
+
+
+# [1,2,3,4,null,null,5] ==> 3
