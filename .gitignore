@@ -1,3 +1,11 @@
 .idea
 .DS_Store
 apachePulsar
+oracle_config.py
+output_data.txt
+*.zip
+venv
+oracle-client
+set_secrets.py
+credentials.json
+token.pickle
